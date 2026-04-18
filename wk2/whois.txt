@@ -1,0 +1,94 @@
+1. WHOIS: google.com
+==============================
+Domain Name: GOOGLE.COM
+Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+Registrar: MarkMonitor Inc.
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2019-09-09
+Creation Date: 1997-09-15
+Registrar Registration Expiration Date: 2028-09-14
+Registrant Organization: Google LLC
+Registrant State/Province: CA
+Registrant Country: US
+Name Server: NS1.GOOGLE.COM
+Name Server: NS2.GOOGLE.COM
+Name Server: NS3.GOOGLE.COM
+Name Server: NS4.GOOGLE.COM
+DNSSEC: unsigned
+ 
+==============================
+2. WHOIS: amazon.com
+==============================
+Domain Name: AMAZON.COM
+Registry Domain ID: 281209_DOMAIN_COM-VRSN
+Registrar: MarkMonitor Inc.
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2023-11-07
+Creation Date: 1994-11-01
+Registrar Registration Expiration Date: 2024-11-01
+Registrant Organization: Amazon Technologies, Inc.
+Registrant State/Province: NV
+Registrant Country: US
+Name Server: NS1.P31.DYNECT.NET
+Name Server: NS2.P31.DYNECT.NET
+DNSSEC: unsigned
+ 
+==============================
+3. WHOIS: wikipedia.org
+==============================
+Domain Name: WIKIPEDIA.ORG
+Registry Domain ID: D51687_DOMAIN_ORG-VRSN
+Registrar: MarkMonitor Inc.
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2023-01-13
+Creation Date: 2001-01-13
+Registrar Registration Expiration Date: 2026-01-13
+Registrant Organization: Wikimedia Foundation, Inc.
+Registrant State/Province: CA
+Registrant Country: US
+Name Server: NS0.WIKIMEDIA.ORG
+Name Server: NS1.WIKIMEDIA.ORG
+Name Server: NS2.WIKIMEDIA.ORG
+DNSSEC: unsigned
+ 
+==============================
+4. WHOIS: github.com
+==============================
+Domain Name: GITHUB.COM
+Registry Domain ID: 1264983250_DOMAIN_COM-VRSN
+Registrar: MarkMonitor Inc.
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2022-09-07
+Creation Date: 2007-10-09
+Registrar Registration Expiration Date: 2025-10-09
+Registrant Organization: GitHub, Inc.
+Registrant State/Province: CA
+Registrant Country: US
+Name Server: DNS1.P08.NSONE.NET
+Name Server: DNS2.P08.NSONE.NET
+Name Server: NS-1283.AWSDNS-32.ORG
+DNSSEC: unsigned
+ 
+==============================
+5. WHOIS: microsoft.com
+==============================
+Domain Name: MICROSOFT.COM
+Registry Domain ID: 2724960_DOMAIN_COM-VRSN
+Registrar: MarkMonitor Inc.
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2023-08-27
+Creation Date: 1991-05-02
+Registrar Registration Expiration Date: 2024-05-03
+Registrant Organization: Microsoft Corporation
+Registrant State/Province: WA
+Registrant Country: US
+Name Server: NS1.MSFT.NET
+Name Server: NS2.MSFT.NET
+Name Server: NS3.MSFT.NET
+Name Server: NS4.MSFT.NET
+DNSSEC: unsigned
