@@ -1,0 +1,55 @@
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# nmap google.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-04-18 20:08 UTC
+Nmap scan report for google.com (142.250.137.100)
+Host is up (0.0025s latency).
+Other addresses for google.com (not scanned): 142.250.137.113 142.250.137.101 142.250.137.102 142.250.137.138 142.250.137.139 2607:f8b0:4023:1804::8a 2607:f8b0:4023:1804::64 2607:f8b0:4023:1804::66 2607:f8b0:4023:1804::8b
+rDNS record for 142.250.137.100: pnyyzb-in-f100.1e100.net
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 4.59 seconds
+
+-----------------------
+
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# nmap -p 80 google.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-04-18 20:08 UTC
+Nmap scan report for google.com (142.250.137.100)
+Host is up (0.0024s latency).
+Other addresses for google.com (not scanned): 142.250.137.113 142.250.137.101 142.250.137.138 142.250.137.139 142.250.137.102 2607:f8b0:4023:1803::65 2607:f8b0:4023:1803::66 2607:f8b0:4023:1803::71 2607:f8b0:4023:1803::8a
+rDNS record for 142.250.137.100: pnyyzb-in-f100.1e100.net
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 0.06 seconds
+
+-----------------------
+
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# nmap -p 1-100 google.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-04-18 20:09 UTC
+Nmap scan report for google.com (142.250.137.113)
+Host is up (0.0024s latency).
+Other addresses for google.com (not scanned): 142.250.137.100 142.250.137.138 142.250.137.101 142.250.137.102 142.250.137.139 2607:f8b0:4023:1803::66 2607:f8b0:4023:1803::64 2607:f8b0:4023:1803::71 2607:f8b0:4023:1803::8a
+rDNS record for 142.250.137.113: pnyyzb-in-f113.1e100.net
+Not shown: 99 filtered tcp ports (no-response)
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 1.78 seconds
+
+-----------------------
+
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# nmap -F google.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-04-18 20:09 UTC
+Nmap scan report for google.com (142.250.137.102)
+Host is up (0.0026s latency).
+Other addresses for google.com (not scanned): 142.250.137.100 142.250.137.138 142.250.137.113 142.250.137.101 142.250.137.139 2607:f8b0:4023:1803::8a 2607:f8b0:4023:1803::64 2607:f8b0:4023:1803::66 2607:f8b0:4023:1803::71
+rDNS record for 142.250.137.102: pnyyzb-in-f102.1e100.net
+Not shown: 98 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 2.08 seconds
