@@ -1,0 +1,19 @@
+Test 1: Using csfr_form.php (Protected Form)
+When submitting the form through csfr_form.php, the login works correctly.
+The PHP session generates a unique random confirmation token and stores it in the session.
+This token is sent as a hidden field with the form submission to csfr_action.php.
+csfr_action.php verifies the token matches the session value before processing.
+Result: Login Successful - the request is validated as coming from a legitimate session.
+
+Test 2: Using csfr.html (Forged/Attacker Page)
+When the attacker's csfr.html page automatically submits the form to csfr.php,
+the unprotected page processes the request and logs the user in without their knowledge.
+The user did not type anything - the form was submitted automatically by JavaScript.
+This demonstrates a successful CSRF attack on an unprotected page.
+Result: Login Successful on csfr.php - the CSRF attack works because there is no token check.
+
+Conclusion:
+The CSRF token implemented in csfr_form.php and csfr_action.php effectively mitigates
+Cross-Site Request Forgery attacks. An attacker forging a request cannot replicate the
+valid session token, so the attack is blocked. Pages without this protection (csfr.php)
+remain vulnerable to automated form submissions from malicious pages.

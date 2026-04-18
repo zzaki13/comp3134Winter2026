@@ -1,0 +1,20 @@
+Issue Identified:
+The storexss.php file reads the contents of storedxss.txt and outputs it directly
+to the browser WITHOUT any sanitization or encoding.
+
+The storedxss.txt file contains a malicious JavaScript script tag:
+<script>document.location.href="/directory_traversal_part1.php"</script>
+
+When a user visits storexss.php, the browser executes this script immediately,
+which redirects the user to the directory_traversal_part1.php page automatically.
+
+This is a Stored XSS (Cross-Site Scripting) attack because:
+1. The malicious script is stored in a file on the server (storedxss.txt)
+2. Every time any user visits storexss.php, the script executes automatically
+3. The user has no control over this - it happens without any interaction
+4. An attacker could use this to redirect users to malicious sites, steal cookies,
+   or perform any action the victim's browser can perform
+
+Unlike Reflected XSS where the script is in the URL or form input, Stored XSS is
+more dangerous because the malicious code is permanently stored and affects ALL
+visitors to the page, not just those who click a malicious link.
