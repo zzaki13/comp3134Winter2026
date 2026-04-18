@@ -1,0 +1,2 @@
+service ssh restart
+ssh -p 2222 root@178.128.227.101
