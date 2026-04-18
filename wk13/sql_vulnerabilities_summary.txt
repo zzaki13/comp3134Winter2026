@@ -1,0 +1,22 @@
+Scenario 1: Searching for "Ben"
+Expected Result: No results found.
+What occurred: The query searched for firstname = 'Ben' AND active = 1.
+Since Ben's active column is set to 0, he did not meet the condition and was
+not returned. This is the expected and correct behavior of the application.
+
+Scenario 2: Searching for "Ben'-- "
+Expected Result: Ben should appear despite active = 0.
+What occurred: The single quote closed the firstname condition early, and the
+-- comment symbol commented out the rest of the SQL query including AND active = 1.
+The query became: SELECT * FROM users WHERE firstname = 'Ben'
+Ben was returned even though he is inactive. This is a SQL injection attack
+that bypasses application logic by manipulating the query structure.
+
+Scenario 3: Searching for "Ben' or 1=1-- "
+Expected Result: All rows in the database should be returned.
+What occurred: The injection changed the query to:
+SELECT * FROM users WHERE firstname = 'Ben' OR 1=1
+Since 1=1 is always true, every row in the database was returned including
+inactive users. This is a dangerous SQL injection that dumps the entire table,
+exposing all user data regardless of any filters or conditions.
+This type of attack can be used to extract sensitive data from any database.
