@@ -1,0 +1,22 @@
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# tcpdump -i eth0 tcp
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+20:48:52.195982 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 792819746:792819854, ack 571748537, win 1182, length 108
+20:48:52.196061 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 108:224, ack 1, win 1182, length 116
+20:48:52.222909 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [P.], seq 1:37, ack 4294967252, win 1018, length 36
+20:48:52.222909 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [.], ack 224, win 1023, length 0
+20:48:52.223095 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 224:260, ack 37, win 1182, length 36
+20:48:52.248860 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [P.], seq 37:73, ack 224, win 1023, length 36
+20:48:52.249028 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 260:296, ack 73, win 1182, length 36
+20:48:52.282945 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [.], ack 296, win 1023, length 0
+20:48:52.282945 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [P.], seq 73:109, ack 296, win 1023, length 36
+20:48:52.283128 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 296:332, ack 109, win 1182, length 36
+20:48:52.298735 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.49278 > 67.207.67.2.domain: Flags [S], seq 868371364, win 64240, options [mss 1460,sackOK,TS val 3395656743 ecr 0,nop,wscale 7,tfo  cookiereq,nop,nop], length 0
+20:48:52.300091 IP 67.207.67.2.domain > lamp-ubuntu-s-1vcpu-1gb-tor1-01.49278: Flags [S.], seq 3000104847, ack 868371365, win 65160, options [mss 1460,sackOK,TS val 1273039585 ecr 3395656743,nop,wscale 10], length 0
+20:48:52.300141 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.49278 > 67.207.67.2.domain: Flags [.], ack 1, win 502, options [nop,nop,TS val 3395656745 ecr 1273039585], length 0
+20:48:52.300236 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.49278 > 67.207.67.2.domain: Flags [P.], seq 1:47, ack 1, win 502, options [nop,nop,TS val 3395656745 ecr 1273039585], length 46 43962+ PTR? 56.249.251.99.in-addr.arpa. (44)
+20:48:52.300485 IP 67.207.67.2.domain > lamp-ubuntu-s-1vcpu-1gb-tor1-01.49278: Flags [.], ack 47, win 64, options [nop,nop,TS val 1273039586 ecr 3395656745], length 0
+20:48:52.302902 IP 67.207.67.2.domain > lamp-ubuntu-s-1vcpu-1gb-tor1-01.49278: Flags [P.], seq 1:104, ack 47, win 64, options [nop,nop,TS val 1273039588 ecr 3395656745], length 103 43962 1/0/0 PTR pool-99-251-249-56.cpe.net.cable.rogers.com. (101)
+20:48:52.302955 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.49278 > 67.207.67.2.domain: Flags [.], ack 104, win 502, options [nop,nop,TS val 3395656748 ecr 1273039588], length 0
+20:48:52.310512 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 332:1984, ack 109, win 1182, length 1652
+20:48:52.314954 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [P.], seq 109:145, ack 296, win 1023, length 36

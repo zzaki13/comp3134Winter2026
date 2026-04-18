@@ -1,0 +1,36 @@
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# ^C
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# tcpdump -A -i eth0
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+20:37:35.751698 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 789421302:789421410, ack 571701421, win 771, length 108
+E.....@.@.M....ec..8..../...".x.P..........~~"....b0.^.r...D........-....Z....*..1Cl..&"n....)...r3.B..\Q.6....@....+.I....8.G_.U.9.y-.V..g...h...
+.
+20:37:35.751831 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 108:192, ack 1, win 771, length 84
+E..|..@.@.M....ec..8..../..b".x.P.......5).L..3.W}.hq.+..r.w..]#..X...Z?..T<...=b.G.c.....|....Om^..gk...$\...6..h.%._=z.\.Y
+20:37:35.751966 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 192:260, ack 1, win 771, length 68
+E..l..@.@.M....ec..8..../...".x.P....x..H_'W0G.18..#A..3M.-,......@..c......%.l.m.P;.....)W......~.&.SE.2...
+20:37:35.771804 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [P.], seq 1:37, ack 4294967140, win 252, length 36
+E..L*j@.w..'c..8...e....".x./..ZP....d.....F.4.....rY......0,-.k|.w..N..h7..
+20:37:35.771970 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 260:296, ack 37, win 771, length 36
+E..L..@.@.M....ec..8..../...".x.P....X.......:3.5=V..)....}.Lg9....&4...H.>.
+20:37:35.779788 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [.], ack 0, win 252, length 0
+E..(*k@.w..Jc..8...e....".x./...P.............
+20:37:35.785780 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [.], ack 108, win 251, length 0
+E..(*l@.w..Ic..8...e....".x./..bP.............
+20:37:35.785781 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [.], ack 260, win 251, length 0
+E..(*m@.w..Hc..8...e....".x./...P.............
+20:37:35.801787 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [P.], seq 37:73, ack 260, win 251, length 36
+E..L*n@.w..#c..8...e....".x./...P...O....Kb..N.bz_l.V   ..,_']X.;Tb..|..H.X.3.
+20:37:35.801989 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 296:332, ack 73, win 771, length 36
+E..L..@.@.M....ec..8..../...".x.P....X..X...^...G.W._GM.wQ;...7^..9. -.jn..o
+20:37:35.831667 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh: Flags [P.], seq 73:109, ack 296, win 250, length 36
+E..L*o@.w.."c..8...e....".x./...P...#...8].<.......v.<...A.e/$._....bS}T$.M.
+20:37:35.831915 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogers.com.52933: Flags [P.], seq 332:368, ack 109, win 771, length 36
+E..L..@.@.M....ec..8..../..B".y.P....X...^...Z.....A.../...}....n..S..`...zt
+20:37:35.850519 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.48536 > 67.207.67.3.domain: 2533+ [1au] PTR? 56.249.251.99.in-addr.arpa. (55)
+E..S8...@.%)...eC.C....5.?.             ............56.249.251.99.in-addr.arpa.......)........
+20:37:35.850807 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.51704 > 67.207.67.3.domain: 20138+ [1au] PTR? 56.249.251.99.in-addr.arpa. (55)
+E..S....@.O?...eC.C....5.?.     N............56.249.251.99.in-addr.arpa.......)........
+20:37:35.851280 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.54617 > 67.207.67.3.domain: 33653+ [1au] PTR? 101.227.128.178.in-addr.arpa. (57)
+E..U....@..0...eC.C..Y.5.A...u...........101.227.128.178.in-addr.arpa.......)........
+20:37:35.851618 IP 67.207.67.3.domain > lamp-ubuntu-s-1vcpu-1gb-tor1-01.48536: 2533 1/0/1 PTR pool-99-251-249-56.cpe.net.cable.rogers.com. (112)

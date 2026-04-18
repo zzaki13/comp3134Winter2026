@@ -1,0 +1,34 @@
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# tcpdump -XX -i eth0
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+20:40:03.551308 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogerlags [P.], seq 792673482:792673670, ack 571720801, win 771, length 188
+        0x0000:  fe00 0000 0101 4e44 5cee 68f5 0800 4510  ......ND\.h...E.
+        0x0010:  00e4 0445 4000 4006 42a5 b280 e365 63fb  ...E@.@.B....ec.
+        0x0020:  f938 0016 cec5 2f3f 3cca 2213 c461 5018  .8..../?<."..aP.
+        0x0030:  0303 f3f0 0000 89dc 21bd 708d 3902 391a  ........!.p.9.9.
+        0x0040:  3b08 ee74 442a c1eb 19da 00e8 c4cd e489  ;..tD*..........
+        0x0050:  5932 5e9f ab16 5b03 cd79 c7d9 1b78 b13f  Y2^...[..y...x.?
+        0x0060:  9f21 766c 2473 256d 3be2 a264 7475 3ac5  .!vl$s%m;..dtu:.
+        0x0070:  f9cf ac60 a9cc 6d79 eea2 e8f4 81b4 8c87  ...`..my........
+        0x0080:  1e8e 1d2a a207 63a4 6dac 4c5f 6f92 7dd0  ...*..c.m.L_o.}.
+        0x0090:  84a9 4bf7 1fbb 6f49 2311 f1b6 0376 37f3  ..K...oI#....v7.
+        0x00a0:  3143 9f7f 4db7 7311 5f2f 334c 1718 b104  1C..M.s._/3L....
+        0x00b0:  6d07 61d0 b7fd d080 0e1b 6b9b 5318 417a  m.a.......k.S.Az
+        0x00c0:  ac6b 7773 6c38 bb1f 9372 c17d df59 27d9  .kwsl8...r.}.Y'.
+        0x00d0:  29ff 8cb1 ce77 85e2 8987 42d8 9d8b 2af6  )....w....B...*.
+        0x00e0:  dc42 ec5d 0577 a9ba 7f18 bac2 4f0e 5738  .B.].w......O.W8
+        0x00f0:  e354                                     .T
+20:40:03.555415 IP pool-99-251-249-56.cpe.net.cable.rogers.com.52933 > lamp-ubuntu-s-1vcpu-1gb-lags [P.], seq 1:37, ack 4294967140, win 1023, length 36
+        0x0000:  4e44 5cee 68f5 fe00 0000 0101 0800 4500  ND\.h.........E.
+        0x0010:  004c 356e 4000 7706 db23 63fb f938 b280  .L5n@.w..#c..8..
+        0x0020:  e365 cec5 0016 2213 c461 2f3f 3c2e 5018  .e...."..a/?<.P.
+        0x0030:  03ff efe1 0000 2f8a de5f 084d 8d32 3c6e  ....../.._.M.2<n
+        0x0040:  f632 397a f94e 44ad dfdf 2f22 4d02 1fb2  .29z.ND.../"M...
+        0x0050:  1b6e 7c99 c174 cf24 b616                 .n|..t.$..
+20:40:03.555599 IP lamp-ubuntu-s-1vcpu-1gb-tor1-01.ssh > pool-99-251-249-56.cpe.net.cable.rogerlags [P.], seq 188:224, ack 37, win 771, length 36
+        0x0000:  fe00 0000 0101 4e44 5cee 68f5 0800 4510  ......ND\.h...E.
+        0x0010:  004c 0446 4000 4006 433c b280 e365 63fb  .L.F@.@.C<...ec.
+        0x0020:  f938 0016 cec5 2f3f 3d86 2213 c485 5018  .8..../?=."...P.
+        0x0030:  0303 f358 0000 4154 5424 2f03 daa0 53be  ...X..ATT$/...S.
+        0x0040:  07db fdd5 0b2a 0cce 90e9 c4e8 d574 f5d1  .....*.......t..
+        0x0050:  ed18 2505 5192 0e11 7966                 ..%.Q...yf
