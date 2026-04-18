@@ -1,0 +1,20 @@
+strip_tags():
+Removes all HTML and PHP tags from the input entirely.
+Example: <script>alert('hello')</script> becomes alert('hello')
+The tags are stripped out but the text content between the tags remains.
+This can cause unintended data loss if the user intentionally typed HTML-like content.
+
+htmlentities():
+Converts HTML special characters into their HTML entity equivalents.
+Example: <script>alert('hello')</script> becomes &lt;script&gt;alert('hello')&lt;/script&gt;
+The full original input is preserved and displayed safely as plain text in the browser.
+The tags are NOT executed as HTML or JavaScript — they are shown literally on screen.
+
+Key Difference:
+strip_tags() REMOVES the tags completely.
+htmlentities() ENCODES the tags so they display safely without being executed.
+
+htmlentities() is generally the preferred approach for output because it:
+1. Preserves the original user input for display purposes
+2. Prevents XSS (Cross-Site Scripting) attacks by encoding dangerous characters
+3. Does not silently discard parts of the user's input

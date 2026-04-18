@@ -1,0 +1,18 @@
+Scenario 1: Navigate to form and type a valid English word (e.g. "cybersecurity")
+The page displays the definition of the word. The URL updates to /browse/cybersecurity.
+The input is reflected in the URL as a query string. The site handles valid input correctly.
+
+Scenario 2: Navigate to URL and type an invalid English word after /browse/
+The site displays a "no results found" message or suggests similar words.
+The invalid input is handled gracefully without exposing any server errors.
+The URL shows the invalid word but no sensitive information is revealed.
+
+Scenario 3: Navigate to form and type <script>alert('hello')</script>
+The script does NOT execute. The site sanitizes and escapes the input.
+The page either shows no results or displays the text safely without running JavaScript.
+This shows the site has XSS (Cross-Site Scripting) protection in place.
+
+Scenario 4: Navigate to URL and type <script>alert('hello')</script> after term=
+Same result as Scenario 3. The JavaScript is not executed.
+The site properly encodes/escapes the input in the URL and prevents the XSS attack.
+This confirms the production site has proper input validation and output encoding.
