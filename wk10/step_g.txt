@@ -1,0 +1,22 @@
+The Problem:
+HTML comments (<!-- comment -->) are visible to anyone who views the page source
+in their browser (right-click → View Page Source). This means sensitive information
+left in HTML comments — such as employee IDs, passwords, API keys, server IPs,
+or internal notes — can be read by any user or attacker visiting the page.
+ 
+The Mitigation:
+Convert all HTML comments to PHP comments.
+PHP comments use the // or /* */ syntax and are processed on the SERVER side.
+They are never sent to the browser and therefore cannot be seen by viewing page source.
+ 
+Example:
+BEFORE (visible in browser source):
+<!--Created by Zaki Mohammed with employee id: 123456-->
+ 
+AFTER (invisible to browser):
+<?php // Created by Zaki Mohammed with employee id: 123456 ?>
+ 
+By converting all HTML comments to PHP comments, the sensitive information is
+completely hidden from end users and potential attackers who might inspect the
+page source code.
+ 

@@ -1,0 +1,17 @@
+What I see on the browser (the issue):
+When passing q=hello (a folder that does not exist) to the script, the page displays a PHP
+warning error message revealing internal server file path information such as:
+"Warning: scandir(hello): failed to open dir: No such file or directory in
+/var/www/html/directory_traversal_part1.php on line X"
+ 
+The script has NO input validation. It accepts any value passed via the query string
+and directly uses it in the scandir() function without checking if the path exists
+or if it is a safe/valid path.
+ 
+What sensitive information is given by this page:
+1. The full server-side file path is exposed: /var/www/html/directory_traversal_part1.php
+2. The server's directory structure is revealed
+3. The PHP version and error handling configuration is exposed
+4. An attacker can determine valid directories by trial and error using the query string
+5. This vulnerability allows directory traversal attacks where an attacker can navigate
+   outside the intended web root directory by using ../ sequences

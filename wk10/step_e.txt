@@ -1,0 +1,22 @@
+There are two main issues to mitigate in directory_traversal_part1.php:
+ 
+Issue 1: Users can navigate outside the web root using ../ sequences
+Mitigation: Use PHP's basename() function on the input parameter.
+basename() strips any directory path components from the input and returns only
+the final filename or folder name. This means that even if a user passes ../../etc,
+basename() will return just "etc" — preventing them from navigating up the directory tree.
+ 
+Issue 2: The script attempts to scan directories that do not exist, revealing error info
+Mitigation: Use PHP's file_exists() function to check if the path exists before
+calling scandir(). If the directory does not exist, display a safe error message
+instead of a PHP warning that reveals server path information.
+ 
+BONUS - Issue 3: Users can pass filenames with dots (e.g. file.txt) instead of directories
+Mitigation: Check if the input parameter contains a dot using strpos(). If a dot is
+found in the input, reject the request with a safe error message. This prevents users
+from attempting to read individual files on the server.
+ 
+Summary of changes made in directory_traversal_part2.php:
+- Added basename() to sanitize the path input
+- Added file_exists() check before scanning
+- Added strpos() check to reject inputs containing dots (bonus)

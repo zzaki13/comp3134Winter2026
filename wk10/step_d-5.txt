@@ -1,0 +1,21 @@
+What I see on the browser (the issue):
+When passing q=%2e%2e%2f to the script, the page behaves the same as passing q=../
+The reason is that %2e%2e%2f is the URL-encoded version of ../
+  %2e = .  (dot)
+  %2e = .  (dot)
+  %2f = /  (forward slash)
+ 
+The PHP server automatically decodes URL-encoded characters before processing,
+so %2e%2e%2f becomes ../ and the directory traversal attack still works.
+ 
+What sensitive information is given by this page:
+1. This demonstrates that simple string filtering for "../" is NOT sufficient to prevent
+   directory traversal attacks, because attackers can bypass filters using URL encoding
+2. The server decodes %2e%2e%2f to ../ which traverses one directory above web root
+3. The same sensitive directory and file structure information is exposed as with ../
+4. An attacker can use various encoding techniques to bypass naive security filters:
+   - URL encoding: %2e%2e%2f
+   - Double URL encoding: %252e%252e%252f
+   - Unicode encoding: ..%c0%af
+5. Proper mitigation requires using functions like basename() and realpath() rather
+   than simple string replacement/filtering

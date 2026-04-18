@@ -1,0 +1,17 @@
+ 
+What I see on the browser (the issue):
+When passing q=../../ to the script, the page successfully lists the contents of a directory
+TWO levels above the web root (/var/www/html). This means an attacker can navigate
+outside the web root entirely and view sensitive system directories and files.
+ 
+The ../ sequence means "go up one directory level". Using ../../ goes up two levels,
+which from /var/www/html would reach the root or near-root of the Linux file system.
+ 
+What sensitive information is given by this page:
+1. The server's full directory structure outside of the web root is exposed
+2. An attacker can see system folders such as /etc, /var, /home, /root, etc.
+3. With further traversal, an attacker could attempt to read sensitive files
+   such as /etc/passwd which contains system user account information
+4. This is a classic Directory Traversal vulnerability - one of the OWASP Top 10
+   security risks for web applications
+5. No authentication or validation is in place to prevent this access
